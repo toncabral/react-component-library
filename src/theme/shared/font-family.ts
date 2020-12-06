@@ -1,27 +1,28 @@
 interface IFontFamilies {
   [index: string]: {
-    font: string
-    fallback: string
-  }
+    font: string;
+    fallback: string;
+  };
 }
 
 const fontFamilies: IFontFamilies = {
   Montserrat: {
     font: 'Montserrat',
-    fallback: 'Helvetica, Arial'
+    fallback: 'Helvetica, Arial',
   },
   Anton: {
     font: 'Anton',
-    fallback: 'Helvetica, Arial'
+    fallback: 'Helvetica, Arial',
   },
   Trebuchet: {
     font: 'Trebuchet MS',
-    fallback: 'Helvetica, Arial'
-  }
-}
-
-const fontFamily = (family: string): string => {
-  return family ? `'${fontFamilies[family].font}', ${fontFamilies[family].fallback}, sans-serif` : 'inherit';
+    fallback: 'Helvetica, Arial',
+  },
 };
 
-export default fontFamily
+const fontFamily = (family: string): string =>
+  family
+    ? `'${fontFamilies[family].font}', ${fontFamilies[family].fallback}, sans-serif`
+    : 'inherit';
+
+export default fontFamily;

@@ -3,6 +3,8 @@ dist
 tests
 coverage
 styleguide.config.js
+package.json
+tsconfig.json
 
 src/**/*.test.tsx
 src/**/*.md

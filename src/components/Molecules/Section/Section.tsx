@@ -1,19 +1,19 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import Text from '../../Atoms/Text/Text'
-import RichText from '../../Atoms/RichText/RichText'
+import Text from '../../Atoms/Text/Text';
+import RichText from '../../Atoms/RichText/RichText';
 
 interface IProps {
-  title: string
-  titleFamily?: string
-  titleTag: string
-  titleSize?: string 
-  titleWeight?: string
-  titleColor?: string
-  uppercase?: boolean
-  bodyAlign?: string
-  content: string
+  title: string;
+  titleFamily?: string;
+  titleTag: string;
+  titleSize?: string;
+  titleWeight?: string;
+  titleColor?: string;
+  uppercase?: boolean;
+  bodyAlign?: string;
+  content: string;
 }
 
 const Section: React.FC<IProps> = ({
@@ -25,24 +25,22 @@ const Section: React.FC<IProps> = ({
   titleColor,
   uppercase,
   bodyAlign,
-  content = ''
-}: IProps) => {
-  return (
-    <>
-      <Text
-        tag={titleTag}
-        family={titleFamily}
-        size={titleSize}
-        weight={titleWeight}
-        uppercase={uppercase}
-        color={titleColor}
-      >
-        {title}
-      </Text>
-      <RichText align={bodyAlign} markup={content} />
-    </>
-  )
-}
+  content = '',
+}: IProps) => (
+  <>
+    <Text
+      tag={titleTag}
+      family={titleFamily}
+      size={titleSize}
+      weight={titleWeight}
+      uppercase={uppercase}
+      color={titleColor}
+    >
+      {title}
+    </Text>
+    <RichText align={bodyAlign} markup={content} />
+  </>
+);
 
 Section.defaultProps = {
   titleFamily: 'Montserrat',
@@ -50,8 +48,8 @@ Section.defaultProps = {
   uppercase: false,
   titleColor: 'inherit',
   titleSize: 'l',
-  bodyAlign: 'left'
-}
+  bodyAlign: 'left',
+};
 
 Section.propTypes = {
   /** Section Title */
@@ -71,7 +69,7 @@ Section.propTypes = {
   /** Section alignment */
   bodyAlign: PropTypes.string,
   /** Section content */
-  content: PropTypes.string.isRequired
-}
+  content: PropTypes.string.isRequired,
+};
 
-export default Section
+export default Section;
