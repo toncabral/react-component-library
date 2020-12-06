@@ -12,7 +12,7 @@ interface IProps {
   titleWeight?: string;
   titleColor?: string;
   uppercase?: boolean;
-  bodyAlign?: string;
+  bodyAlign?: 'left' | 'center' | 'right';
   content: string;
 }
 
@@ -67,7 +67,7 @@ Section.propTypes = {
   /** Title Size */
   titleSize: PropTypes.string,
   /** Section alignment */
-  bodyAlign: PropTypes.string,
+  bodyAlign: PropTypes.oneOf(['left', 'center', 'right']),
   /** Section content */
   content: PropTypes.string.isRequired,
 };
